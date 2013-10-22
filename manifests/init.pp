@@ -5,10 +5,10 @@
 #   include vagrant
 
 class vagrant {
-  package { 'Vagrant':
+  package { 'Vagrant-1.3.5':
     ensure   => installed,
     source   => 'http://files.vagrantup.com/packages/a40522f5fabccb9ddabad03d836e120ff5d14093/Vagrant-1.3.5.dmg',
-    provider => 'pkgdmg'
+    provider => 'pkgdmg',
   }
 
   file { "/Users/${::boxen_user}/.vagrant.d":
